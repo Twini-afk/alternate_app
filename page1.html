@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+        function goToNextPage() {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text"> Hold On Tight! </h1>
+            <h2 class="header_text"> Today, it’s all about YOU! </h2>
+           
+        </div>
+        <div class="gif_container">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGR4a3Q3aXc5NWdudmdzYnh0a2RtYWh5MzA2aXUzeW9qdDZmaDdsbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eltZvfFAW9f9HI1foH/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class = "buttons">
+            <button class="btn" id = "yesButton" onclick="nextPage()"> Continue!</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "page2.html";
+                }
+                
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script> 
+        </div>
+    </div>
+</body>
+</html>
